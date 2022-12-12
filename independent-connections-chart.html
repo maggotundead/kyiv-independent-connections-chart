@@ -6,7 +6,7 @@
     <title>independent</title>
 </head>
 <body>
-    <div>
+    <div class="block-chart">
         <div class="chart">
             <div class="chart-inner">
                 <div class="lines">
@@ -857,6 +857,16 @@
                 --line-color: #B7B7B7;
                 --line-color-hover: #0B3CEA;
             }
+            @media screen and (max-width: 860px) {
+                .block-chart {
+                    width: 100%;
+                    overflow-x: auto;
+                    scrollbar-width: none;
+                    scroll-snap-align: center;
+                    overscroll-behavior-x: contain;
+                    scroll-snap-type: x mandatory;
+                }
+            }
             .chart {
                 padding-top: 100px;
                 padding-bottom: 60px;
@@ -871,11 +881,6 @@
             @media screen and (max-width: 860px) {
                 .chart {
                     width: 860px;
-                    overflow-x: auto;
-                    scrollbar-width: none;
-                    scroll-snap-align: center;
-                    overscroll-behavior-x: contain;
-                    scroll-snap-type: x mandatory;
                 }
                 .chart::-webkit-scrollbar {
                     display: none;
@@ -1570,6 +1575,7 @@
                 position: absolute;
                 border-color: var(--line-color);
                 border-style: solid;
+                border-width: 0;
                 right: 0;
                 transition: var(--duration);
             }
