@@ -694,7 +694,7 @@
 
                     <div class="info-item publications item-global-research">
                         <div class="info-item-image">
-                            <img src="img/global-research.png" alt="">
+                            <img src="img/global-research.jpg" alt="">
                         </div>
                         <div class="info-item-title"><!-- Michel Chossudovsky / Global Research -->Global Research</div>
                         <div class="info-item-popup">
@@ -832,13 +832,27 @@
             }
             .chart {
                 padding-top: 100px;
+                padding-bottom: 60px;
                 margin: 0 auto;
                 width: 100%;
-                min-width: 860px;
+                /* min-width: 860px; */
                 max-width: 1200px;
                 font-family: 'Proxima Nova', sans-serif;
                 font-weight: 400;
                 position: relative;
+            }
+            @media screen and (max-width: 860px) {
+                .chart {
+                    width: 860px;
+                    overflow-x: auto;
+                    scrollbar-width: none;
+                    scroll-snap-align: center;
+                    overscroll-behavior-x: contain;
+                    scroll-snap-type: x mandatory;
+                }
+                .chart::-webkit-scrollbar {
+                    display: none;
+                }
             }
             .chart-inner {
                 position: relative;
@@ -851,7 +865,7 @@
                 position: relative;
                 z-index: 3;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .info-items {
                     height: 1200px;
                 }
@@ -931,6 +945,30 @@
                 pointer-events: none;
                 text-align: left;
             }
+
+            @media screen and (max-width: 1440px) {
+                .info-item-popup {
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                .item-rt .info-item-popup,
+                .item-the-duran .info-item-popup,
+                .item-russia-insider .info-item-popup,
+                .item-global-research .info-item-popup {
+                    left: 200%;
+                }
+            }
+
+            @media screen and (max-width: 860px) {
+                .item-rt .info-item-popup,
+                .item-the-duran .info-item-popup,
+                .item-russia-insider .info-item-popup,
+                .item-global-research .info-item-popup {
+                    left: 200%;
+                }
+            }
+
             .info-item.is-active .info-item-popup {
                 opacity: 1;
                 pointer-events: auto;
@@ -1084,7 +1122,7 @@
             .item-global-coordinating-council {
                 width: var(--item-image-size);
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .item-global-coordinating-council .info-item-title {
                     width: 100px;
                 }
@@ -1128,7 +1166,7 @@
             .item-john-varoli {
                 top: 870px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .item-james-jatras,
                 .item-john-varoli {
                     /* top: 920px; */
@@ -1154,7 +1192,7 @@
             .item-sergei-markov {
                 left: calc(50% + 185px);
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .item-edward-lozansky {
                     right: calc(50% + 48px);
                 }
@@ -1182,7 +1220,7 @@
             .item-world-russia-forum {
                 right: 110px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .item-global-coordinating-council,
                 .item-ksors,
                 .item-russian-center-ny,
@@ -1217,7 +1255,7 @@
                 /* left: 70px; */
                 left: 32px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .item-rt,
                 .item-the-duran {
                     left: 30px;
@@ -1232,7 +1270,7 @@
             .item-russia-insider {
                 left: 115px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .item-konstantin-malofeev,
                 .item-russia-insider {
                     left: 80px;
@@ -1244,7 +1282,7 @@
             .item-global-research {
                 left: 200px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .item-strategic-culture-foundation,
                 .item-global-research {
                     left: 160px;
@@ -1256,7 +1294,7 @@
             .item-elena-branson {
                 top: 250px;
             }
-            @media (max-width: 1023px) {
+            @media screen and (max-width: 1023px) {
                 .item-edward-lozansky,
                 .item-elena-branson {
                     top: 310px;
@@ -1269,7 +1307,7 @@
             .item-elena-branson {
                 left: calc(50% + 64px);
             }
-            @media (max-width: 1023px) {
+            @media screen and (max-width: 1023px) {
                 .item-edward-lozansky {
                     right: calc(50% + 32px);
                 }
@@ -1342,7 +1380,7 @@
                 height: 1px;
                 /* border-width: 0; */
             }
-            @media (max-width: 1023px) {
+            @media screen and (max-width: 1023px) {
                 .line-2,
                 .line-3 {
                     width: 136px;
@@ -1358,7 +1396,7 @@
                 transform: rotate(56deg);
                 transform-origin: left center;
             }
-            @media (max-width: 1023px) {
+            @media screen and (max-width: 1023px) {
                 .line-2 {
                     transform: rotate(-82deg);
                     transform-origin: right center;
@@ -1388,7 +1426,7 @@
                 height: 132px;
                 border-top-left-radius: 132px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .line-5 {
                     left: calc(80px + (var(--item-image-size) / 2));
                 }
@@ -1398,7 +1436,7 @@
                 height: 438px;
                 border-top-left-radius: 150px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .line-6 {
                     left: calc(30px + (var(--item-image-size) / 2));
                 }
@@ -1409,7 +1447,7 @@
                 top: 568px;
                 border-width: 0 1px 0 0;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .line-7 {
                     left: calc(30px + (var(--item-image-size) / 2));
                 }
@@ -1420,7 +1458,7 @@
                 border-width: 0 1px 0 0;
                 top: 282px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .line-8 {
                     left: calc(80px + (var(--item-image-size) / 2));
                 }
@@ -1437,7 +1475,7 @@
                 height: 388px;
                 border-width: 0 1px 0 0;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .line-10 {
                     left: calc(160px + (var(--item-image-size) / 2));
                 }
@@ -1452,7 +1490,7 @@
                 /* border-width: 0; */
                 width: 68px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .line-11 {
                     left: calc(80px + (var(--item-image-size) / 2));
                     transform: rotate(52deg);
@@ -1467,7 +1505,7 @@
                 border-width: 1px 1px 0 0;
                 border-top-right-radius: 130px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .line-12 {
                     right: calc(70px + (var(--item-image-size) / 2));
                 }
@@ -1478,7 +1516,7 @@
                 top: 312px;
                 height: 158px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .line-13 {
                     right: calc(70px + (var(--item-image-size) / 2));
                     top: 330px;
@@ -1515,7 +1553,7 @@
                 border-width: 0 1 1px 0;
                 border-bottom-right-radius: 130px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .line-14 {
                     right: 32px;
                 }
@@ -1554,7 +1592,7 @@
                 right: calc(50% + (var(--item-image-size) / 2 ) + 74px);
                 bottom: 122px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .line-16 {
                     bottom: 580px;
                 }
@@ -1597,7 +1635,7 @@
                 right: calc(50% + (var(--item-image-size) / 2 ) + 12px);
                 bottom: 140px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .line-19 {
                     bottom: 475px;
                 }
@@ -1632,7 +1670,7 @@
                 right: calc(50% + (var(--item-image-size) / 2 ) + 185px);
                 bottom: 122px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .line-21 {
                     left: calc(80px + var(--item-image-size) + 12px);
                     bottom: 455px;
@@ -1676,7 +1714,7 @@
                 right: calc(50% + (var(--item-image-size) / 2 ) + 74px);
                 bottom: 122px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .line-23 {
                     left: calc(160px + var(--item-image-size) + 12px);
                     bottom: 860px;
@@ -1688,7 +1726,7 @@
                     bottom: 262px;
                 }
             }
-            @media (max-width: 1023px) {
+            @media screen and (max-width: 1023px) {
                 .line-23 {
                     left: calc(160px + var(--item-image-size) + 18px);
                     right: calc(50% + 32px + var(--item-image-size) + 12px);
@@ -1726,7 +1764,7 @@
                 right: calc(50% + (var(--item-image-size) / 2 ) + 75px);
                 bottom: 122px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .line-25 {
                     bottom: 919px;
                 }
@@ -1735,7 +1773,7 @@
                     bottom: 262px;
                 }
             }
-            @media (max-width: 1023px) {
+            @media screen and (max-width: 1023px) {
                 .line-25 {
                     bottom: 858px;
                     right: calc(50% + var(--item-image-size) + 32px + 12px);
@@ -1778,7 +1816,7 @@
                 right: calc(110px + var(--item-image-size) + 12px);
                 bottom: 140px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .line-27 {
                     right: calc(70px + var(--item-image-size) + 12px);
                     bottom: 686px;
@@ -1796,7 +1834,7 @@
                     bottom: 358px;
                 }
             }
-            @media (max-width: 1023px) {
+            @media screen and (max-width: 1023px) {
                 .line-28 {
                     left: calc(50% + 32px + (var(--item-image-size) / 2));
                     top: 402px;
@@ -1843,7 +1881,7 @@
                 left: calc(50% + (var(--item-image-size) / 2 ) + 185px);
                 bottom: 122px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .line-31 {
                     right: calc(70px + var(--item-image-size) + 12px);
                     bottom: 576px;
@@ -1863,7 +1901,7 @@
                     bottom: 122px;
                 }
             }
-            @media (max-width: 1023px) {
+            @media screen and (max-width: 1023px) {
                 .line-31 {
                     left: calc(50% + 32px + (var(--item-image-size) / 2));
                     top: 402px;
@@ -1917,7 +1955,7 @@
                 right: 50%;
                 bottom: 519px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .line-35,
                 .line-36,
                 .line-37,
@@ -1929,7 +1967,7 @@
                     bottom: 732px;
                 }
             }
-            @media (max-width: 1023px) {
+            @media screen and (max-width: 1023px) {
                 .line-35 {
                     left: calc(50% + 32px + (var(--item-image-size) / 2));
                     top: 402px;
@@ -1978,7 +2016,7 @@
             .line-41 svg path {
                 stroke-width: 2px;
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 .line-40 {
                     bottom: 358px;
                 }
@@ -1991,7 +2029,7 @@
                     stroke-width: 2.5px;
                 }
             }
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1023px) {
                 .line-40 {
                     top: 402px;
                     bottom: 358px;
@@ -2218,6 +2256,7 @@
                 if ( e.target.classList.contains('info-item-popup-more') ) {
                     e.target.closest('.info-item').classList.add('is-expanded');
                 }
+
             });
         </script>
     </div>
