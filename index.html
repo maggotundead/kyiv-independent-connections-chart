@@ -1091,7 +1091,8 @@
                 z-index: 3;
                 top: 100%;
                 left: 50%;
-                max-height: 207px;
+                /* max-height: 207px; */
+                max-height: 250px;
                 transform: translateX(-50%);
                 width: 270px;
                 background-color: #fff;
@@ -1105,6 +1106,28 @@
                 opacity: 0;
                 pointer-events: none;
                 text-align: left;
+            }
+            /* .info-item-popup {
+                max-height: 490px;
+            } */
+            .item-james-jatras .info-item-popup,
+            .item-john-varoli .info-item-popup,
+            .item-charles-bausman .info-item-popup,
+            .item-sergei-markov .info-item-popup {
+                max-height: 210px;
+            }
+            @media screen and (max-width: 1199px) {
+                .info-item-popup {
+                    max-height: 470px;
+                }
+                .item-james-jatras .info-item-popup,
+                .item-john-varoli .info-item-popup {
+                    max-height: 340px;
+                }
+                .item-charles-bausman .info-item-popup,
+                .item-sergei-markov .info-item-popup {
+                    max-height: 210px;
+                }
             }
 
             @media screen and (max-width: 1440px) {
@@ -1136,13 +1159,24 @@
                     top: 50%;
                     transform: translate(-50%, -50%);
                 } */
-                .item-charles-bausman.is-expanded .info-item-popup,
+                /* .item-charles-bausman.is-expanded .info-item-popup,
                 .item-james-jatras.is-expanded .info-item-popup,
                 .item-john-varoli.is-expanded .info-item-popup,
                 .item-sergei-markov.is-expanded .info-item-popup {
                     top: 50%;
                     transform: translate(-50%, -50%);
+                } */
+                /* .info-item-popup {
+                    max-height: 490px;
                 }
+                .item-james-jatras .info-item-popup,
+                .item-john-varoli .info-item-popup {
+                    max-height: 340px;
+                }
+                .item-charles-bausman .info-item-popup,
+                .item-sergei-markov .info-item-popup {
+                    max-height: 210px;
+                } */
                 .item-konstantin-malofeev .info-item-popup {
                 /* .item-rt .info-item-popup, */
                 /* .item-the-duran .info-item-popup, */
@@ -1178,6 +1212,7 @@
                 background-color: transparent;
                 padding: 0;
                 cursor: pointer;
+                z-index: 3;
             }
 
             .info-item-popup-text {
